@@ -101,12 +101,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
     }
-
-    
-    //Table View delegate methods
-    //func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    //    code
-   // }
 }
 
 extension SearchViewController: UISearchResultsUpdating {
