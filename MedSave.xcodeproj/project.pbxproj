@@ -15,7 +15,6 @@
 		352673FB1CAC6A37006DFBD9 /* MedSaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352673FA1CAC6A37006DFBD9 /* MedSaveUITests.swift */; };
 		35539B421CB079D700A2F51F /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35539B411CB079D700A2F51F /* Drug.swift */; };
 		35539B4D1CB2204B00A2F51F /* DrugDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35539B4C1CB2204B00A2F51F /* DrugDetailsTableViewCell.swift */; };
-		35539B4F1CB22A9B00A2F51F /* Expand Arrow-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 35539B4E1CB22A9B00A2F51F /* Expand Arrow-15.png */; };
 		3598E11A1CACF1AB0049C0E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3598E1191CACF1AB0049C0E5 /* Assets.xcassets */; };
 		3598E11C1CACF92B0049C0E5 /* DrugDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598E11B1CACF92B0049C0E5 /* DrugDetailsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		352673FC1CAC6A37006DFBD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35539B411CB079D700A2F51F /* Drug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		35539B4C1CB2204B00A2F51F /* DrugDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		35539B4E1CB22A9B00A2F51F /* Expand Arrow-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expand Arrow-15.png"; sourceTree = "<group>"; };
 		3598E1191CACF1AB0049C0E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3598E11B1CACF92B0049C0E5 /* DrugDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +110,6 @@
 				3598E11B1CACF92B0049C0E5 /* DrugDetailsViewController.swift */,
 				35539B4C1CB2204B00A2F51F /* DrugDetailsTableViewCell.swift */,
 				3598E1191CACF1AB0049C0E5 /* Assets.xcassets */,
-				35539B4E1CB22A9B00A2F51F /* Expand Arrow-15.png */,
 				352673DE1CAC6A36006DFBD9 /* Main.storyboard */,
 				352673E61CAC6A37006DFBD9 /* Info.plist */,
 			);
@@ -245,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3598E11A1CACF1AB0049C0E5 /* Assets.xcassets in Resources */,
-				35539B4F1CB22A9B00A2F51F /* Expand Arrow-15.png in Resources */,
 				352673E01CAC6A36006DFBD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
