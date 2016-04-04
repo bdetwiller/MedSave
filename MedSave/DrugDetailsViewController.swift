@@ -16,7 +16,6 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     var detailDrug: Drug!
     var fields = ["Form", "Dosage", "Quantity"]
     var cellIdentifier = "DrugDetailsCell"
-    
   
     
     override func viewDidLoad() {
@@ -105,9 +104,7 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         // Display the menu
         self.presentViewController(optionMenu, animated: true, completion: nil)
-        
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-
     }
 
 }

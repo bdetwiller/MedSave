@@ -97,6 +97,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 
                 let controller = segue.destinationViewController as! DrugDetailsViewController
                 controller.detailDrug = drug
+                
+                tableView.deselectRowAtIndexPath(indexPath, animated: false)
                 print(controller.detailDrug)
             }
         }
