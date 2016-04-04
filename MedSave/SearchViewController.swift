@@ -87,8 +87,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDrugDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
+                
+                let drug: Drug
+                if searchController.active && searchController.searchBar.text != "" {
+                    drug = filteredDrugs[indexPath.row]
+                } else {
+                    drug = drugs[indexPath.row]
+                }
+                
                 let controller = segue.destinationViewController as! DrugDetailsViewController
-                controller.detailDrug = drugs[indexPath.row]
+                controller.detailDrug = drug
                 print(controller.detailDrug)
             }
         }
