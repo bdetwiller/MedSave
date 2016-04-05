@@ -26,6 +26,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         drugs.append(Drug(name: "Popchips", generic: "yummy"))
         drugs.append(Drug(name: "Quest Bar", generic: "Probiotic Vegtable Plastic"))
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
