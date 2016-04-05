@@ -10,8 +10,11 @@ import UIKit
 
 class PharmacyListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     var pharmacies = [Pharmacy]()
     var cellIdentifier = "PharmacyCellIdentifier"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +29,8 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
         pharmacies.append(Pharmacy(name: "CVS", address: "14th and 23rd"))
         pharmacies.append(Pharmacy(name: "Duane Reade", address: "52 Houston"))
         
-       // self.tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
+
 
 
         // Do any additional setup after loading the view.
@@ -37,6 +41,7 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
         // Dispose of any resources that can be recreated.
     }
     
+
     //Table View Code
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -47,12 +52,15 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! PharmacyTableViewCell
         let pharmacy = pharmacies[indexPath.row]
         
-        cell.textLabel?.text = pharmacy.name
-        cell.detailTextLabel?.text = pharmacy.address
+        cell.pharmacyNameLabel.text = pharmacy.name
+        cell.pharmacyAddressLabel.text = pharmacy.address
         
+        //hardcoded
+        cell.priceLabel.text = "$5.00"
+        cell.pharmacyDistanceLabel.text = "0.2 miles"
         return cell
     }
 
