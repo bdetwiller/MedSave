@@ -22,6 +22,7 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         drugDetailsName.text = detailDrug.drugName + " (generic)"
         drugDetailsGeneric.text = detailDrug.genericName
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     

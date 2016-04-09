@@ -26,3 +26,5 @@ class Drug {
         
     }
 }
+
+//object should probably have function so we can apply lables etc. 
