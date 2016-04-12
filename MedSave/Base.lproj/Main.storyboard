@@ -36,10 +36,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Wa-mO-G6B">
-                                <rect key="frame" x="52" y="128" width="271" height="165"/>
-                                <color key="backgroundColor" red="1" green="0.72102409601211548" blue="0.30053821206092834" alpha="0.60597022804054057" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4E3-gH-k75">
                                 <rect key="frame" x="59" y="408" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,6 +70,9 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="C7L-V5-S6a"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-04-12 at 2.17.59 PM" translatesAutoresizingMaskIntoConstraints="NO" id="1ue-fU-abZ">
+                                <rect key="frame" x="67" y="128" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -187,7 +186,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RuP-kd-lRL">
-                                        <rect key="frame" x="16" y="183" width="324" height="150"/>
+                                        <rect key="frame" x="16" y="181" width="324" height="150"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrugDetailsCell" id="jz4-ux-b8N" customClass="DrugDetailsTableViewCell" customModule="MedSave" customModuleProvider="target">
@@ -241,10 +240,11 @@
                                             <outlet property="delegate" destination="QVw-or-d6u" id="USV-xz-PJa"/>
                                         </connections>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOU-C6-oJz">
-                                        <rect key="frame" x="96" y="461" width="164" height="33"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOU-C6-oJz">
+                                        <rect key="frame" x="86" y="453" width="184" height="41"/>
                                         <color key="backgroundColor" red="1" green="0.71764705882352942" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="FIND LOWEST PRICE">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -429,6 +429,7 @@
     </scenes>
     <resources>
         <image name="Expand Arrow-15" width="15" height="15"/>
+        <image name="Screen Shot 2016-04-12 at 2.17.59 PM" width="493" height="293"/>
         <image name="meds" width="37" height="37"/>
         <image name="search" width="25" height="25"/>
     </resources>
