@@ -14,8 +14,9 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var drugDetailsGeneric: UILabel!
     
     var detailDrug: Drug!
-    var fields = ["Form", "Dosage", "Quantity"]
-    var cellIdentifier = "DrugDetailsCell"
+    private var fields = ["Form", "Dosage", "Quantity", "Near"]
+    private var cellIdentifier = "DrugDetailsCell"
+    private var locationOptions = ["Current Location", "City or Zip Code"]
   
     
     override func viewDidLoad() {
@@ -58,6 +59,9 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             
         case "Quantity":
             cell.valueLabel.text = String(detailDrug.quantity[0])
+            
+        case "Near":
+            cell.valueLabel.text = locationOptions[0]
         
         default:
             print("something broke")
@@ -99,6 +103,13 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
                 let action = UIAlertAction(title: String(option), style: .Default, handler: selectHandler)
                 optionMenu.addAction(action)
             }
+        case 3:
+            optionMenu = UIAlertController(title: "Set Location", message: nil, preferredStyle: .ActionSheet)
+            for option in locationOptions {
+                let action = UIAlertAction(title: String(option), style: .Default, handler: selectHandler)
+                optionMenu.addAction(action)
+            }
+
         default:
             print("something broke")
         }
