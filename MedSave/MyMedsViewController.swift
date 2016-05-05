@@ -19,8 +19,8 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         perscriptions.append(Perscription(drug: Drug(name: "Popchips", generic: "yummy"), selectedPharmacy: Pharmacy(name: "CVS", address: "245 W 17th Street")))
         perscriptions.append(Perscription(drug: Drug(name: "Quest Bars", generic: "probiotic vegtable plastic"), selectedPharmacy: Pharmacy(name: "Walgreens", address: "205 Avenue A")))
         
-        let blueBoarder = UIColor(red:0.53, green:0.66, blue:0.82, alpha:1.0)
-        let blueBackground = UIColor(red:0.42, green:0.61, blue:0.82, alpha:0.1).CGColor
+        let blueBoarder = UIColor(red:0.61, green:0.81, blue:0.96, alpha:1.0)
+        let blueBackground = UIColor(red:0.15, green:0.60, blue:0.95, alpha:0.1).CGColor
         card.layer.backgroundColor = blueBackground
         card.addBorderOf(color: blueBoarder, withWidth: 2.0, ofCornorRadius: 4.0)
         
