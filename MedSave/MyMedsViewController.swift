@@ -43,12 +43,16 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! PerscriptionTableViewCell
         let perscription = perscriptions[indexPath.row]
-        cell.textLabel?.text = perscription.drug.drugName
-        cell.detailTextLabel?.text = perscription.price
-
+        let perscriptionDetails = String(perscription.drug.dosage) + ", " + String(perscription.drug.quantity) + ", "
+        let perscription2 = perscriptionDetails + String(perscription.drug.form)
+        cell.drugNameLabel?.text = perscription.drug.drugName + " (" + perscription.drug.genericName + ")"
+        cell.perscriptionDetailsLabel?.text = perscription2
+        cell.priceLabel?.text = perscription.price
+        cell.pharmacyLabel?.text = perscription.selectedPharmacy.name
         return cell
+
     }
 
 
