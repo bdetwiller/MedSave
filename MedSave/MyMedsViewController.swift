@@ -26,7 +26,7 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    //TableView
+    // MARK: TableView
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

@@ -33,7 +33,7 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
-    //Table View Code
+    // MARK: Table View Code
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -48,7 +48,7 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         let field = fields[indexPath.row]
         cell.fieldLabel.text = field
         
-        //Set default info for cell valueLabel
+        // Set default info for cell valueLabel
         switch field {
             
         case "Form":
@@ -82,7 +82,7 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         var optionMenu = UIAlertController()
 
         switch indexPath.row {
-        //Need to make DRY, split out into another function
+        // TODO: Need to make DRY, split out into another function
         case 0:
             optionMenu = UIAlertController(title: "Select Form", message: nil, preferredStyle: .ActionSheet)
             for option in detailDrug.form {

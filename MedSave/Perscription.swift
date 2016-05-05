@@ -20,7 +20,7 @@ class Perscription: NSObject {
         self.drug = drug
         self.selectedPharmacy = selectedPharmacy
         
-        //Need to program these depending on how drug object looks
+        // TODO: Need to program these depending on how drug object looks
         self.form = "Tablet"
         self.quantity = "20"
         self.dosage = "10 mg"

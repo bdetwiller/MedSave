@@ -21,6 +21,7 @@
 		3578719C1CB9857000662370 /* Perscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3578719B1CB9857000662370 /* Perscription.swift */; };
 		3598E11A1CACF1AB0049C0E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3598E1191CACF1AB0049C0E5 /* Assets.xcassets */; };
 		3598E11C1CACF92B0049C0E5 /* DrugDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598E11B1CACF92B0049C0E5 /* DrugDetailsViewController.swift */; };
+		B50023971CDBAC5B00CF994D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50023961CDBAC5B00CF994D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3578719B1CB9857000662370 /* Perscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Perscription.swift; sourceTree = "<group>"; };
 		3598E1191CACF1AB0049C0E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3598E11B1CACF92B0049C0E5 /* DrugDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugDetailsViewController.swift; sourceTree = "<group>"; };
+		B50023961CDBAC5B00CF994D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				35539B521CB4218900A2F51F /* Model */,
 				3598E1191CACF1AB0049C0E5 /* Assets.xcassets */,
 				352673DE1CAC6A36006DFBD9 /* Main.storyboard */,
+				B50023961CDBAC5B00CF994D /* Extensions.swift */,
 				352673E61CAC6A37006DFBD9 /* Info.plist */,
 			);
 			path = MedSave;
@@ -312,6 +315,7 @@
 				35539B561CB4227E00A2F51F /* Pharmacy.swift in Sources */,
 				35539B581CB42E1E00A2F51F /* PharmacyTableViewCell.swift in Sources */,
 				352673DB1CAC6A36006DFBD9 /* MyMedsViewController.swift in Sources */,
+				B50023971CDBAC5B00CF994D /* Extensions.swift in Sources */,
 				3578719C1CB9857000662370 /* Perscription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

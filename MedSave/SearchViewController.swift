@@ -17,7 +17,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    // View setup + Dummy data
+    // MARK: View setup + Dummy data
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +44,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    //Search Bar Code
+    // MARK: Search Bar Code
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         filteredDrugs = drugs.filter { drug in
             return drug.drugName.lowercaseString.containsString(searchText.lowercaseString)
@@ -53,7 +53,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.reloadData()
     }
     
-    //Table View Code
+    // MARK: Table View Code
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -85,7 +85,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
-    //Segue Code
+    // MARK: Segue Code
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDrugDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {

@@ -20,7 +20,7 @@ class Drug {
         self.genericName = generic
         self.form = ["Tablet", "Capsule"]
         
-        //Should add in label for dose and quantitiy. Maybe dict of options and each with own object ?
+        // TODO: Should add in label for dose and quantitiy. Maybe dict of options and each with own object ?
         self.quantity = [30, 60, 90, 120, 180]
         self.dosage = ["10 mg", "20 mg", "40 mg", "80 mg"]
         

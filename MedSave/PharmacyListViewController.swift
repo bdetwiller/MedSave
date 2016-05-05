@@ -19,7 +19,7 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Dummy data
+        // Dummy data
         pharmacies.append(Pharmacy(name: "CVS", address: "245 West 17th Street"))
         pharmacies.append(Pharmacy(name: "Walgreens", address: "205 Avenue A"))
         pharmacies.append(Pharmacy(name: "CVS", address: "14th and 12th"))
@@ -42,7 +42,7 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
 
-    //Table View Code
+    // MARK: Table View Code
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -58,7 +58,7 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
         cell.pharmacyNameLabel.text = pharmacy.name
         cell.pharmacyAddressLabel.text = pharmacy.address
         
-        //hardcoded
+        // TODO: Add API
         cell.priceLabel.text = "$5.00"
         cell.pharmacyDistanceLabel.text = "0.2 miles"
         return cell
