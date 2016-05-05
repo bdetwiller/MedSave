@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView{
     
-    func addBorderOf(color color:UIColor?, withWidth width:CGFloat?,ofCornorRadious radious:CGFloat?) {
+    func addBorderOf(color color:UIColor?, withWidth width:CGFloat?, ofCornorRadius radius:CGFloat?) {
         self.layer.borderColor = color?.CGColor
         
         if let width = width{
@@ -23,8 +23,8 @@ extension UIView{
         } else {
             self.layer.borderColor = UIColor.whiteColor().CGColor
         }
-        if let radious = radious{
-            self.layer.cornerRadius = radious
+        if let radius = radius{
+            self.layer.cornerRadius = radius
         } else {
             self.layer.cornerRadius = 0
         }
