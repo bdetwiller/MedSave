@@ -18,8 +18,13 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // TODO: Add Real data
-        perscriptions.append(Perscription(drug: Drug(name: "Popchips", generic: "yummy"), selectedPharmacy: Pharmacy(name: "CVS", address: "245 W 17th Street")))
-        perscriptions.append(Perscription(drug: Drug(name: "Quest Bars", generic: "probiotic vegtable plastic"), selectedPharmacy: Pharmacy(name: "Walgreens", address: "205 Avenue A")))
+        let perscription1 = Perscription(drug: Drug(name: "Popchips", generic: "yummy"), form: "Tablet", quantity: "10", dosage: "15 mg")
+        perscription1.selectedPharmacy = Pharmacy(name: "CVS", address: "245 W 17th Street")
+        let perscription2 = Perscription(drug: Drug(name: "Quest Bars", generic: "probiotic vegtable plastic"), form: "Tablet", quantity: "10", dosage: "15 mg")
+        perscription2.selectedPharmacy = Pharmacy(name: "Walgreens", address: "205 Avenue A")
+        perscriptions.append(perscription1)
+        perscriptions.append(perscription2)
+        
         
         let blueBoarder = UIColor(red:0.61, green:0.81, blue:0.96, alpha:1.0)
         let blueBackground = UIColor(red:0.15, green:0.60, blue:0.95, alpha:0.1).CGColor
@@ -59,7 +64,7 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.drugNameLabel?.text = "(" + perscription.drug.genericName + ") " + perscription.drug.drugName
         cell.perscriptionDetailsLabel?.text = perscriptionDetails
         cell.priceLabel?.text = perscription.price
-        cell.pharmacyLabel?.text = perscription.selectedPharmacy.name
+        cell.pharmacyLabel?.text = perscription.selectedPharmacy?.name
         return cell
     }
     

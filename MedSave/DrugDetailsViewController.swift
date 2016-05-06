@@ -14,6 +14,16 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var drugDetailsGeneric: UILabel!
     
     var detailDrug: Drug!
+    
+    // TODO: Refactor once have API
+    private var selectedFields: [String: String] = [
+        "Form" : "",
+        "Dosage" : "",
+        "Quantity" : "",
+        "Location" : ""
+    ]
+
+    
     private var fields = ["Form", "Dosage", "Quantity", "Near"]
     private var cellIdentifier = "DrugDetailsCell"
     private var locationOptions = ["Current Location", "City or Zip Code"]
@@ -76,10 +86,14 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Create an option menu as an action sheet
         
-        // Add actions to the menu
         let selectHandler = { (action:UIAlertAction!) -> Void in
+            
+            //  Update label to show selected form, dosage or quantity
             let cell = tableView.cellForRowAtIndexPath(indexPath) as! DrugDetailsTableViewCell
             cell.valueLabel.text = action.title
+            
+            // Store selected info in hash
+            self.selectedFields[self.fields[indexPath.row]] = action.title
         }
         
         var optionMenu = UIAlertController()
@@ -121,6 +135,20 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         self.presentViewController(optionMenu, animated: true, completion: nil)
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
+    
+    // MARK: Segue Code
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showPharmacyView" {
+            let perscription = Perscription(drug: detailDrug, form: selectedFields["Form"]!, quantity: selectedFields["Quantity"]!, dosage: selectedFields["Dosage"]!)
+
+                let controller = segue.destinationViewController as! PharmacyListViewController
+                controller.perscription = perscription
+                
+                print(controller.perscription)
+            // TODO: Pass location
+        }
+    }
+
 
 }
 

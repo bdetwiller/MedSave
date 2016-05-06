@@ -13,17 +13,19 @@ class Perscription: NSObject {
     var form: String
     var quantity: String
     var dosage: String
-    var price: String
-    var selectedPharmacy: Pharmacy
+    var price: String?
+    var selectedPharmacy: Pharmacy?
     
-    init(drug: Drug, selectedPharmacy: Pharmacy) {
+    init(drug: Drug, form: String, quantity: String, dosage: String) {
         self.drug = drug
-        self.selectedPharmacy = selectedPharmacy
         
-        // TODO: Need to program these depending on how drug object looks
-        self.form = "Tablet"
-        self.quantity = "20"
-        self.dosage = "10 mg"
-        self.price = "$5.00"
+        // TODO: Add objects or enums for each
+        self.form = form
+        self.quantity = quantity
+        self.dosage = dosage
+        
+        // TODO: Make this calculated
     }
+    
+    //TODO: should this have some helper functions?
 }
