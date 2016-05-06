@@ -17,6 +17,7 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // TODO: Add Real data
         perscriptions.append(Perscription(drug: Drug(name: "Popchips", generic: "yummy"), selectedPharmacy: Pharmacy(name: "CVS", address: "245 W 17th Street")))
         perscriptions.append(Perscription(drug: Drug(name: "Quest Bars", generic: "probiotic vegtable plastic"), selectedPharmacy: Pharmacy(name: "Walgreens", address: "205 Avenue A")))
         
@@ -28,6 +29,7 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 90
         
+        self.navigationController?.navigationBar.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -58,6 +60,7 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    // MARK: Segue Code
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showSavedDrugPhramacies" {
             if let indexPath = table.indexPathForSelectedRow {

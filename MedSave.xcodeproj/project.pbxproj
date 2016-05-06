@@ -23,6 +23,7 @@
 		3598E11C1CACF92B0049C0E5 /* DrugDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598E11B1CACF92B0049C0E5 /* DrugDetailsViewController.swift */; };
 		B50023971CDBAC5B00CF994D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50023961CDBAC5B00CF994D /* Extensions.swift */; };
 		B50023991CDC020300CF994D /* PerscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50023981CDC020300CF994D /* PerscriptionTableViewCell.swift */; };
+		B500239B1CDC60C600CF994D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500239A1CDC60C600CF994D /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		3598E11B1CACF92B0049C0E5 /* DrugDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugDetailsViewController.swift; sourceTree = "<group>"; };
 		B50023961CDBAC5B00CF994D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B50023981CDC020300CF994D /* PerscriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerscriptionTableViewCell.swift; sourceTree = "<group>"; };
+		B500239A1CDC60C600CF994D /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				352673DC1CAC6A36006DFBD9 /* SearchViewController.swift */,
 				3598E11B1CACF92B0049C0E5 /* DrugDetailsViewController.swift */,
 				35539B501CB4211700A2F51F /* PharmacyListViewController.swift */,
+				B500239A1CDC60C600CF994D /* TabBarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				35539B561CB4227E00A2F51F /* Pharmacy.swift in Sources */,
 				35539B581CB42E1E00A2F51F /* PharmacyTableViewCell.swift in Sources */,
 				352673DB1CAC6A36006DFBD9 /* MyMedsViewController.swift in Sources */,
+				B500239B1CDC60C600CF994D /* TabBarViewController.swift in Sources */,
 				B50023971CDBAC5B00CF994D /* Extensions.swift in Sources */,
 				3578719C1CB9857000662370 /* Perscription.swift in Sources */,
 			);
