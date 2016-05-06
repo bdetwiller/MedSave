@@ -23,12 +23,10 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         drugDetailsName.text = detailDrug.drugName + " (generic)"
         drugDetailsGeneric.text = detailDrug.genericName
-        
-        
-        // Hide navigation bar
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
+
+        self.addCustomBackButton()
+        self.hideNavigationBar()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     

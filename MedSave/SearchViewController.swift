@@ -36,7 +36,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.navigationItem.titleView = searchController.searchBar
         searchController.hidesNavigationBarDuringPresentation = false
         
-
+        self.addCustomBackButton()
     }
     
     override func viewWillAppear(animated: Bool) {

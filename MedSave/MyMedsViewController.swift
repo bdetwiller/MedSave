@@ -29,8 +29,12 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 90
         
-        self.navigationController?.navigationBar.hidden = true
+        self.addCustomBackButton()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.hidden = true
     }
 
     override func didReceiveMemoryWarning() {

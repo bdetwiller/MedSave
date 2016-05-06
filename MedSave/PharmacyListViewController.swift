@@ -31,9 +31,10 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
         pharmacies.append(Pharmacy(name: "Duane Reade", address: "52 Houston"))
         
         tableView.rowHeight = UITableViewAutomaticDimension
-
-
-
+        
+        // Unhide view controller (so back button appears) but then make it transparent
+        self.navigationController?.navigationBar.hidden = false
+        self.hideNavigationBar()
         // Do any additional setup after loading the view.
     }
 

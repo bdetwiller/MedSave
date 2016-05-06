@@ -30,6 +30,20 @@ extension UIView{
         }
         
         self.clipsToBounds = true
-        
+    }
+}
+
+extension UIViewController {
+    
+    func addCustomBackButton() {
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backButton")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backButton")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+    }
+    
+    func hideNavigationBar() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
     }
 }
