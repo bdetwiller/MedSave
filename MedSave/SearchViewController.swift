@@ -36,7 +36,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.navigationItem.titleView = searchController.searchBar
         searchController.hidesNavigationBarDuringPresentation = false
         
-        
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // Make Nav Bar blue (will not work if in viewDidLoad)
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
     }
 
     override func didReceiveMemoryWarning() {

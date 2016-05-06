@@ -24,8 +24,14 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         drugDetailsName.text = detailDrug.drugName + " (generic)"
         drugDetailsGeneric.text = detailDrug.genericName
         
+        
+        // Hide navigation bar
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
