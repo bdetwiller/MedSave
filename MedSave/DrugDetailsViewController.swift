@@ -24,7 +24,6 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         drugDetailsName.text = detailDrug.drugName + " (generic)"
         drugDetailsGeneric.text = detailDrug.genericName
 
-        self.addCustomBackButton()
         self.hideNavigationBar()
 
         // Do any additional setup after loading the view, typically from a nib.

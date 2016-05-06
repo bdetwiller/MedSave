@@ -247,7 +247,9 @@
                             <constraint firstItem="ri6-De-at8" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="zgG-W3-DA9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KZd-i6-EWk"/>
+                    <navigationItem key="navigationItem" id="KZd-i6-EWk">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Yuz-7R-UeA"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="card" destination="HHo-qP-sTb" id="ley-wf-Kyh"/>
@@ -317,7 +319,9 @@
                             <constraint firstItem="tNs-9o-YVi" firstAttribute="leading" secondItem="TXa-2j-enk" secondAttribute="leading" id="XLL-D4-SRP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4zc-n5-xsv"/>
+                    <navigationItem key="navigationItem" id="4zc-n5-xsv">
+                        <barButtonItem key="backBarButtonItem" title=" " id="O0Z-ML-Zda"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -443,6 +447,9 @@
                             <constraint firstItem="Tl3-Zj-2yv" firstAttribute="top" secondItem="VfS-Te-iJq" secondAttribute="bottom" constant="40" id="r0h-kj-t2e"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Fs9-4E-PHR">
+                        <barButtonItem key="backBarButtonItem" title=" " id="8wn-EH-OYa"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="drugDetailsGeneric" destination="pyc-qc-orj" id="z3f-6D-LEw"/>
@@ -550,7 +557,6 @@
                             <constraint firstItem="qWf-lj-8Od" firstAttribute="leading" secondItem="P0b-jy-gQk" secondAttribute="leading" id="isJ-ww-LFS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Fs9-4E-PHR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="qWf-lj-8Od" id="oBk-nx-BOW"/>

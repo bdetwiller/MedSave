@@ -13,6 +13,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        
+        // Custom backbutton
+        UINavigationBar.appearance().tintColor = UIColor(red:0.15, green:0.60, blue:0.95, alpha:1.0)
         // Do any additional setup after loading the view.
     }
 

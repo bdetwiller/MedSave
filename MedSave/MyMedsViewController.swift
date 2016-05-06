@@ -29,7 +29,6 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 90
         
-        self.addCustomBackButton()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
