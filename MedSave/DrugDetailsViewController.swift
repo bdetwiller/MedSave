@@ -16,18 +16,16 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     
     var detailDrug: Drug!
     
-    // TODO: Refactor once have API
+    private var fields = ["Form", "Dosage", "Quantity", "Near"]
+    private var cellIdentifier = "DrugDetailsCell"
+    private var locationOptions = ["Current Location", "City or Zip Code"]
+    
     private var selectedFields: [String: String] = [
         "Form" : "",
         "Dosage" : "",
         "Quantity" : "",
         "Location" : ""
     ]
-
-    
-    private var fields = ["Form", "Dosage", "Quantity", "Near"]
-    private var cellIdentifier = "DrugDetailsCell"
-    private var locationOptions = ["Current Location", "City or Zip Code"]
   
     
     override func viewDidLoad() {
@@ -40,7 +38,12 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         // hide empty cells
         tableView.tableFooterView = UIView(frame: .zero)
-
+        
+        if let detailDrug = detailDrug {
+            selectedFields["Form"] = detailDrug.form[0]
+            selectedFields["Dosage"] = detailDrug.dosage[0]
+            selectedFields["Quantity"] = String(detailDrug.quantity[0])
+        }
 
         // Do any additional setup after loading the view, typically from a nib.
     }

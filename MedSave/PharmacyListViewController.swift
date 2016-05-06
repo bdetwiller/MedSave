@@ -11,6 +11,9 @@ import UIKit
 class PharmacyListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var perscriptionDetailsLabel: UILabel!
+    @IBOutlet weak var genericNameLabel: UILabel!
+    @IBOutlet weak var drugNameLabel: UILabel!
     
     var pharmacies = [Pharmacy]()
     var perscription: Perscription?
@@ -19,6 +22,12 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let perscription = perscription {
+            drugNameLabel.text = perscription.drug.drugName + " (generic)"
+            genericNameLabel.text = perscription.drug.genericName
+            perscriptionDetailsLabel.text = perscription.dosage + ", " + perscription.quantity + " " + perscription.form
+        }
         
         // Dummy data
         pharmacies.append(Pharmacy(name: "CVS", address: "245 West 17th Street"))

@@ -486,28 +486,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Find the lowest Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xV-gt-004">
-                                <rect key="frame" x="108" y="99" width="159" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-lj-8Od">
-                                <rect key="frame" x="0.0" y="249" width="375" height="369"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-lj-8Od">
+                                <rect key="frame" x="20" y="184" width="335" height="434"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PharmacyCellIdentifier" id="dEn-nF-cqb" customClass="PharmacyTableViewCell" customModule="MedSave" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dEn-nF-cqb" id="bY7-VC-5k9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-rK-AhZ">
-                                                    <rect key="frame" x="10" y="5" width="355" height="34"/>
+                                                    <rect key="frame" x="10" y="5" width="315" height="34"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="AzA-Lg-geK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="316" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="276" height="34"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKb-br-Kpk">
                                                                     <rect key="frame" x="0.0" y="0.0" width="45" height="17"/>
@@ -535,7 +529,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0s-Xe-IeR">
-                                                            <rect key="frame" x="316" y="7" width="39" height="21"/>
+                                                            <rect key="frame" x="276" y="7" width="39" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -563,17 +557,46 @@
                                     <outlet property="delegate" destination="3gQ-2V-o5y" id="VN1-Ne-Yc7"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HQv-XP-Ior">
+                                <rect key="frame" x="10" y="59" width="345" height="94"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Drug Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="BC2-1g-Lxl">
+                                        <rect key="frame" x="96" y="0.0" width="155" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <color key="textColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="generic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="iT4-He-qBc">
+                                        <rect key="frame" x="139" y="41" width="67" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.69803921570000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="perscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="OGb-Zm-2fn">
+                                        <rect key="frame" x="119" y="70" width="107" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.69803921570000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4xV-gt-004" firstAttribute="top" secondItem="qVv-c8-J4N" secondAttribute="bottom" constant="-45" id="4Ac-HN-YV8"/>
-                            <constraint firstAttribute="trailing" secondItem="qWf-lj-8Od" secondAttribute="trailing" id="LIL-cy-VCf"/>
-                            <constraint firstItem="HW1-Uz-C12" firstAttribute="top" secondItem="qWf-lj-8Od" secondAttribute="bottom" id="Zdx-Qb-hSQ"/>
-                            <constraint firstItem="qWf-lj-8Od" firstAttribute="leading" secondItem="P0b-jy-gQk" secondAttribute="leading" id="isJ-ww-LFS"/>
+                            <constraint firstItem="qWf-lj-8Od" firstAttribute="top" secondItem="HQv-XP-Ior" secondAttribute="bottom" constant="60" id="2Lf-f3-xgM"/>
+                            <constraint firstAttribute="trailing" secondItem="qWf-lj-8Od" secondAttribute="trailing" constant="20" id="2tP-yj-gx7"/>
+                            <constraint firstAttribute="trailing" secondItem="HQv-XP-Ior" secondAttribute="trailing" constant="20" id="WQm-Ik-G3l"/>
+                            <constraint firstItem="qWf-lj-8Od" firstAttribute="leading" secondItem="P0b-jy-gQk" secondAttribute="leading" constant="20" id="czE-3l-C5r"/>
+                            <constraint firstItem="HQv-XP-Ior" firstAttribute="top" secondItem="P0b-jy-gQk" secondAttribute="top" constant="59" id="f6Q-Tn-IxO"/>
+                            <constraint firstItem="HW1-Uz-C12" firstAttribute="top" secondItem="qWf-lj-8Od" secondAttribute="bottom" id="rGL-e2-7mV"/>
+                            <constraint firstItem="HQv-XP-Ior" firstAttribute="leading" secondItem="P0b-jy-gQk" secondAttribute="leading" constant="10" id="rsn-oh-21T"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="drugNameLabel" destination="BC2-1g-Lxl" id="7VJ-gH-IH0"/>
+                        <outlet property="genericNameLabel" destination="iT4-He-qBc" id="gQ3-kU-IoT"/>
+                        <outlet property="perscriptionDetailsLabel" destination="OGb-Zm-2fn" id="Cbd-Kc-Eyo"/>
                         <outlet property="tableView" destination="qWf-lj-8Od" id="oBk-nx-BOW"/>
                     </connections>
                 </viewController>
