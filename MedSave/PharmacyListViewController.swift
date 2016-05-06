@@ -23,12 +23,6 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let perscription = perscription {
-            drugNameLabel.text = perscription.drug.drugName + " (generic)"
-            genericNameLabel.text = perscription.drug.genericName
-            perscriptionDetailsLabel.text = perscription.dosage + ", " + perscription.quantity + " " + perscription.form
-        }
-        
         // Dummy data
         pharmacies.append(Pharmacy(name: "CVS", address: "245 West 17th Street"))
         pharmacies.append(Pharmacy(name: "Walgreens", address: "205 Avenue A"))
@@ -40,11 +34,22 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
         pharmacies.append(Pharmacy(name: "Duane Reade", address: "52 Houston"))
         
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80
+
+        tableView.tableFooterView = UIView(frame: .zero)
         
         // Unhide view controller (so back button appears) but then make it transparent
         self.navigationController?.navigationBar.hidden = false
         self.hideNavigationBar()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if let perscription = perscription {
+            drugNameLabel.text = perscription.drug.drugName + " (generic)"
+            genericNameLabel.text = perscription.drug.genericName
+            perscriptionDetailsLabel.text = perscription.dosage + ", " + perscription.quantity + " " + perscription.form
+        }
     }
 
     override func didReceiveMemoryWarning() {
