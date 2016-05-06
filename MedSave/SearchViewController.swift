@@ -35,6 +35,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.tableHeaderView = searchController.searchBar
         self.navigationItem.titleView = searchController.searchBar
         searchController.hidesNavigationBarDuringPresentation = false
+        
+        tableView.tableFooterView = UIView(frame: .zero)
     }
     
     override func viewWillAppear(animated: Bool) {
