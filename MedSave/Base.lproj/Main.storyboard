@@ -345,7 +345,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-Te-iJq">
-                                <rect key="frame" x="10" y="24" width="355" height="554"/>
+                                <rect key="frame" x="10" y="19" width="355" height="559"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-rV-C1B">
                                         <rect key="frame" x="79" y="0.0" width="197" height="77"/>
@@ -365,7 +365,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RuP-kd-lRL">
-                                        <rect key="frame" x="16" y="207" width="324" height="176"/>
+                                        <rect key="frame" x="16" y="210" width="324" height="176"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrugDetailsCell" id="jz4-ux-b8N" customClass="DrugDetailsTableViewCell" customModule="MedSave" customModuleProvider="target">
@@ -420,7 +420,7 @@
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOU-C6-oJz">
-                                        <rect key="frame" x="86" y="513" width="184" height="41"/>
+                                        <rect key="frame" x="86" y="518" width="184" height="41"/>
                                         <color key="backgroundColor" red="1" green="0.61176470588235299" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -442,7 +442,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VfS-Te-iJq" firstAttribute="leading" secondItem="f34-Hd-kK8" secondAttribute="leading" constant="10" id="4q9-y0-Dpg"/>
-                            <constraint firstItem="VfS-Te-iJq" firstAttribute="top" secondItem="6aD-Pe-RPO" secondAttribute="bottom" constant="-40" id="Uh4-kA-Fp0"/>
+                            <constraint firstItem="VfS-Te-iJq" firstAttribute="top" secondItem="6aD-Pe-RPO" secondAttribute="bottom" constant="-45" id="Uh4-kA-Fp0"/>
                             <constraint firstAttribute="trailing" secondItem="VfS-Te-iJq" secondAttribute="trailing" constant="10" id="fZ3-NT-Plb"/>
                             <constraint firstItem="Tl3-Zj-2yv" firstAttribute="top" secondItem="VfS-Te-iJq" secondAttribute="bottom" constant="40" id="r0h-kj-t2e"/>
                         </constraints>
@@ -472,7 +472,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find the lowest Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xV-gt-004">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Find the lowest Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xV-gt-004">
                                 <rect key="frame" x="108" y="99" width="159" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -552,6 +552,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4xV-gt-004" firstAttribute="top" secondItem="qVv-c8-J4N" secondAttribute="bottom" constant="-45" id="4Ac-HN-YV8"/>
                             <constraint firstAttribute="trailing" secondItem="qWf-lj-8Od" secondAttribute="trailing" id="LIL-cy-VCf"/>
                             <constraint firstItem="HW1-Uz-C12" firstAttribute="top" secondItem="qWf-lj-8Od" secondAttribute="bottom" id="Zdx-Qb-hSQ"/>
                             <constraint firstItem="qWf-lj-8Od" firstAttribute="leading" secondItem="P0b-jy-gQk" secondAttribute="leading" id="isJ-ww-LFS"/>
