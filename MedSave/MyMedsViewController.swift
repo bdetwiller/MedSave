@@ -13,6 +13,7 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
     var cellIdentifier = "PerscriptionCell"
 
     @IBOutlet weak var card: UIView!
+    @IBOutlet weak var table: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,9 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         let blueBackground = UIColor(red:0.15, green:0.60, blue:0.95, alpha:0.1).CGColor
         card.layer.backgroundColor = blueBackground
         card.addBorderOf(color: blueBoarder, withWidth: 2.0, ofCornorRadius: 4.0)
+        
+        table.rowHeight = UITableViewAutomaticDimension
+        table.estimatedRowHeight = 90
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -45,14 +49,13 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! PerscriptionTableViewCell
         let perscription = perscriptions[indexPath.row]
-        let perscriptionDetails = String(perscription.drug.dosage) + ", " + String(perscription.drug.quantity) + ", "
-        let perscription2 = perscriptionDetails + String(perscription.drug.form)
-        cell.drugNameLabel?.text = perscription.drug.drugName + " (" + perscription.drug.genericName + ")"
-        cell.perscriptionDetailsLabel?.text = perscription2
+        let perscriptionDetails = perscription.drug.dosage[0] + ", " + String(perscription.drug.quantity[0]) + " " + perscription.drug.form[0]
+        
+        cell.drugNameLabel?.text = "(" + perscription.drug.genericName + ") " + perscription.drug.drugName
+        cell.perscriptionDetailsLabel?.text = perscriptionDetails
         cell.priceLabel?.text = perscription.price
         cell.pharmacyLabel?.text = perscription.selectedPharmacy.name
         return cell
-
     }
 
 
