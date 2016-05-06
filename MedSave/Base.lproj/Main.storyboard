@@ -346,9 +346,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-rV-C1B">
-                                <rect key="frame" x="36" y="29" width="303" height="77"/>
+                                <rect key="frame" x="36" y="24" width="303" height="77"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="CNI-0F-J1P">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="CNI-0F-J1P">
                                         <rect key="frame" x="53" y="0.0" width="197" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
                                         <color key="textColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -363,9 +363,9 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-Te-iJq">
-                                <rect key="frame" x="16" y="166" width="343" height="432"/>
+                                <rect key="frame" x="16" y="161" width="343" height="437"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RuP-kd-lRL">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RuP-kd-lRL">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="176"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -421,7 +421,7 @@
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOU-C6-oJz">
-                                        <rect key="frame" x="0.0" y="391" width="343" height="41"/>
+                                        <rect key="frame" x="0.0" y="396" width="343" height="41"/>
                                         <color key="backgroundColor" red="1" green="0.61176470588235299" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -446,7 +446,7 @@
                             <constraint firstItem="Tl3-Zj-2yv" firstAttribute="top" secondItem="VfS-Te-iJq" secondAttribute="bottom" constant="20" id="S9R-0t-dZn"/>
                             <constraint firstItem="Quk-rV-C1B" firstAttribute="leading" secondItem="f34-Hd-kK8" secondAttribute="leadingMargin" constant="20" id="UWK-YV-BiF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Quk-rV-C1B" secondAttribute="trailing" constant="20" id="WbS-TQ-eQh"/>
-                            <constraint firstItem="Quk-rV-C1B" firstAttribute="top" secondItem="6aD-Pe-RPO" secondAttribute="bottom" constant="-35" id="Z7g-hJ-VSb"/>
+                            <constraint firstItem="Quk-rV-C1B" firstAttribute="top" secondItem="6aD-Pe-RPO" secondAttribute="bottom" constant="-40" id="Z7g-hJ-VSb"/>
                             <constraint firstItem="VfS-Te-iJq" firstAttribute="top" secondItem="Quk-rV-C1B" secondAttribute="bottom" constant="60" id="Zq0-79-YEP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VfS-Te-iJq" secondAttribute="trailing" id="kDY-pf-nIt"/>
                         </constraints>
@@ -458,6 +458,7 @@
                     <connections>
                         <outlet property="drugDetailsGeneric" destination="pyc-qc-orj" id="z3f-6D-LEw"/>
                         <outlet property="drugDetailsName" destination="CNI-0F-J1P" id="VPw-h5-doD"/>
+                        <outlet property="tableView" destination="RuP-kd-lRL" id="Mr2-JP-1c6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfV-ON-vX3" userLabel="First Responder" sceneMemberID="firstResponder"/>

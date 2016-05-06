@@ -33,6 +33,7 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         
         table.rowHeight = UITableViewAutomaticDimension
         table.estimatedRowHeight = 90
+        table.tableFooterView = UIView(frame: .zero)
         
         // Do any additional setup after loading the view, typically from a nib.
     }

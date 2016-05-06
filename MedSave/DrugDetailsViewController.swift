@@ -12,6 +12,7 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var drugDetailsName: UILabel!
     @IBOutlet weak var drugDetailsGeneric: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var detailDrug: Drug!
     
@@ -35,6 +36,11 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         drugDetailsGeneric.text = detailDrug.genericName
 
         self.hideNavigationBar()
+        
+        
+        // hide empty cells
+        tableView.tableFooterView = UIView(frame: .zero)
+
 
         // Do any additional setup after loading the view, typically from a nib.
     }
