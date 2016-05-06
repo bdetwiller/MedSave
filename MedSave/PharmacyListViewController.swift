@@ -13,6 +13,7 @@ class PharmacyListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView!
     
     var pharmacies = [Pharmacy]()
+    var perscription: Perscription?
     var cellIdentifier = "PharmacyCellIdentifier"
     
 

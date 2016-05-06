@@ -101,7 +101,7 @@
                                             <outlet property="perscriptionDetailsLabel" destination="h96-3f-7O0" id="qiJ-Ag-fyy"/>
                                             <outlet property="pharmacyLabel" destination="ZYG-Rb-lhW" id="z3S-2O-O7m"/>
                                             <outlet property="priceLabel" destination="9Jr-sM-Hfb" id="czp-Uu-6i8"/>
-                                            <segue destination="3gQ-2V-o5y" kind="show" id="9OM-GQ-B3Y"/>
+                                            <segue destination="3gQ-2V-o5y" kind="show" identifier="showSavedDrugPhramacies" id="9OM-GQ-B3Y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -233,7 +233,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4E3-gH-k75" firstAttribute="top" secondItem="ri6-De-at8" secondAttribute="bottom" constant="20" id="1gW-bD-S1I"/>
+                            <constraint firstItem="4E3-gH-k75" firstAttribute="top" secondItem="ri6-De-at8" secondAttribute="bottom" constant="10" id="1gW-bD-S1I"/>
                             <constraint firstAttribute="trailing" secondItem="4E3-gH-k75" secondAttribute="trailing" constant="10" id="6cP-Gl-w79"/>
                             <constraint firstItem="4E3-gH-k75" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="10" id="DLc-bR-Xzr"/>
                             <constraint firstItem="HHo-qP-sTb" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="10" id="Ds7-lX-JS9"/>

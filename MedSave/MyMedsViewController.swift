@@ -57,6 +57,21 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.pharmacyLabel?.text = perscription.selectedPharmacy.name
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showSavedDrugPhramacies" {
+            if let indexPath = table.indexPathForSelectedRow {
+                
+                let perscription = perscriptions[indexPath.row]
+
+                let controller = segue.destinationViewController as! PharmacyListViewController
+                controller.perscription = perscription
+                
+                table.deselectRowAtIndexPath(indexPath, animated: false)
+            }
+        }
+    }
+
 
 
 
