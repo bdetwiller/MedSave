@@ -12,9 +12,9 @@ class Drug {
     var drugName: String
     var genericName: String
     var options: [String: [String: [Int]]]
-    var form: [String]
-    var quantity: [Int]
-    var dosage: [String]
+    //var form: [String]
+    //var quantity: [Int]
+    //var dosage: [String]
     
     init(name: String, generic: String) {
         self.drugName = name
@@ -33,11 +33,11 @@ class Drug {
             "c80 mg": [30, 60, 90, 120, 180],
             ],
         ]
-        self.form = ["Tablet", "Capsule"]
+        //self.form = ["Tablet", "Capsule"]
         
         // TODO: Should add in label for dose and quantitiy. Maybe dict of options and each with own object ?
-        self.quantity = [30, 60, 90, 120, 180]
-        self.dosage = ["10 mg", "20 mg", "40 mg", "80 mg"]
+        //self.quantity = [30, 60, 90, 120, 180]
+        //self.dosage = ["10 mg", "20 mg", "40 mg", "80 mg"]
     }
     
     init(name: String, generic: String, option: [String: [String: [Int]]]) {
@@ -45,9 +45,9 @@ class Drug {
         self.genericName = generic
         self.options = option
         
-        self.form = Array(self.options.keys)
-        self.dosage = Array(self.options[self.form[0]]!.keys)
-        self.quantity = Array(self.options[self.form[0]]![self.dosage[0]]!)
+        //self.form = Array(self.options.keys)
+        //self.dosage = Array(self.options[self.form[0]]!.keys)
+        //self.quantity = Array(self.options[self.form[0]]![self.dosage[0]]!)
         
     }
     
