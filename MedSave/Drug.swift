@@ -62,6 +62,18 @@ class Drug {
     func getQuantities(form: String, dosage: String) -> [Int] {
         return Array(self.options[form]![dosage]!)
     }
+    
+    func getFirstForm() -> String {
+        return getForms()[0]
+    }
+    
+    func getFirstDosage() -> String {
+        return getDosages(getFirstForm())[0]
+    }
+    
+    func getFirstQuantity() -> Int {
+        return getQuantities(getFirstForm(), dosage: getFirstDosage())[0]
+    }
 }
 
 //object should probably have function so we can apply lables etc. 

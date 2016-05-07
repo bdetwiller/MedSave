@@ -40,9 +40,9 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.tableFooterView = UIView(frame: .zero)
         
         if let detailDrug = detailDrug {
-            selectedFields["Form"] = detailDrug.form[0]
-            selectedFields["Dosage"] = detailDrug.dosage[0]
-            selectedFields["Quantity"] = String(detailDrug.quantity[0])
+            selectedFields["Form"] = detailDrug.getFirstForm()
+            selectedFields["Dosage"] = detailDrug.getFirstDosage()
+            selectedFields["Quantity"] = String(detailDrug.getFirstQuantity())
         }
 
         // Do any additional setup after loading the view, typically from a nib.
@@ -74,13 +74,13 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         switch field {
             
         case "Form":
-            cell.valueLabel.text = detailDrug.form[0]
+            cell.valueLabel.text = detailDrug.getFirstForm()
             
         case "Dosage":
-            cell.valueLabel.text = detailDrug.dosage[0]
+            cell.valueLabel.text = detailDrug.getFirstDosage()
             
         case "Quantity":
-            cell.valueLabel.text = String(detailDrug.quantity[0])
+            cell.valueLabel.text = String(detailDrug.getFirstQuantity())
             
         case "Near":
             cell.valueLabel.text = locationOptions[0]
@@ -111,21 +111,21 @@ class DrugDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         // TODO: Need to make DRY, split out into another function
         case 0:
             optionMenu = UIAlertController(title: "Select Form", message: nil, preferredStyle: .ActionSheet)
-            for option in detailDrug.form {
+            for option in detailDrug.getForms() {
                 let action = UIAlertAction(title: option, style: .Default, handler: selectHandler)
                 optionMenu.addAction(action)
             }
             
         case 1:
             optionMenu = UIAlertController(title: "Select Dosage", message: nil, preferredStyle: .ActionSheet)
-            for option in detailDrug.dosage {
+            for option in detailDrug.getDosages(selectedFields["Form"]!) {
                 let action = UIAlertAction(title: option, style: .Default, handler: selectHandler)
                 optionMenu.addAction(action)
             }
             
         case 2:
             optionMenu = UIAlertController(title: "Select Quantity", message: nil, preferredStyle: .ActionSheet)
-            for option in detailDrug.quantity {
+            for option in detailDrug.getQuantities(selectedFields["Form"]!, dosage: selectedFields["Dosage"]!) {
                 let action = UIAlertAction(title: String(option), style: .Default, handler: selectHandler)
                 optionMenu.addAction(action)
             }
