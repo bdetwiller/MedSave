@@ -15,6 +15,7 @@ class Perscription: NSObject {
     var dosage: String
     var price: String?
     var selectedPharmacy: Pharmacy?
+    var priceData = [[String: AnyObject]]()
     
     init(drug: Drug, form: String, quantity: String, dosage: String) {
         self.drug = drug
@@ -27,5 +28,16 @@ class Perscription: NSObject {
         // TODO: Make this calculated
     }
     
+    func getPriceData(ncdp: String, ndc: String, quantity: String) {
+        let endpointUrl = "prices?ncdp_list=" + ncdp + "&ndc=" + ndc +  "&quantity=" + quantity
+        let apiReq = apiRequest()
+        apiReq.queryEndpoint(endpointUrl, completion:  {(data,error) in
+            if let data = data?["result"] as? [[String:AnyObject]] {
+                self.priceData = data
+            }
+        })
+    }
+
+
     //TODO: should this have some helper functions?
 }
