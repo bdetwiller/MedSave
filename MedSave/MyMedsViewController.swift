@@ -28,9 +28,9 @@ class MyMedsViewController: UIViewController, UITableViewDataSource, UITableView
         perscriptions.append(perscription2)
         
         
-        let orangeBackground1 = UIColor(red:1.00, green:0.61, blue:0.10, alpha:0.1).CGColor
-        let orangeBackground2 = UIColor(red:1.00, green:0.77, blue:0.38, alpha:0.1).CGColor
-        let orangeBoarder = UIColor(red:1.00, green:0.61, blue:0.10, alpha:1.0)
+//        let orangeBackground1 = UIColor(red:1.00, green:0.61, blue:0.10, alpha:0.1).CGColor
+//        let orangeBackground2 = UIColor(red:1.00, green:0.77, blue:0.38, alpha:0.1).CGColor
+//        let orangeBoarder = UIColor(red:1.00, green:0.61, blue:0.10, alpha:1.0)
         let blueBoarder = UIColor(red:0.61, green:0.81, blue:0.96, alpha:1.0)
         let blueBackground = UIColor(red:0.15, green:0.60, blue:0.95, alpha:0.1).CGColor
         card.layer.backgroundColor = blueBackground
