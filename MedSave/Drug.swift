@@ -45,10 +45,6 @@ class Drug {
         self.genericName = generic
         self.options = option
         
-        //self.form = Array(self.options.keys)
-        //self.dosage = Array(self.options[self.form[0]]!.keys)
-        //self.quantity = Array(self.options[self.form[0]]![self.dosage[0]]!)
-        
     }
     
     func getForms() -> [String] {

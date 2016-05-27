@@ -38,6 +38,5 @@ class Perscription: NSObject {
         })
     }
 
-
     //TODO: should this have some helper functions?
 }

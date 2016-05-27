@@ -31,11 +31,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-        
         tableView.tableHeaderView = searchController.searchBar
         self.navigationItem.titleView = searchController.searchBar
         searchController.hidesNavigationBarDuringPresentation = false
-        
+        searchController.searchBar.placeholder = "Type your medication name"
+
         tableView.tableFooterView = UIView(frame: .zero)
     }
     
@@ -47,6 +47,24 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getDrugs(query: String) {
+        let endpointUrl = "drugs?product_name=" + query
+        let apiReq = apiRequest()
+        apiReq.queryEndpoint(endpointUrl, completion:  {(data, error) in
+            if let data = data?["result"] as? [[String:AnyObject]] {
+                for drug in data {
+                    let drugName = drug["Product_Name"] as! String
+                    // TODO: fix API to return generic
+                    self.drugs.append(Drug(name: drugName, generic: "something generic"))
+                }
+                print(self.drugs[0].drugName)
+                print(self.drugs[1].drugName)
+                
+            }
+        })
+        tableView.reloadData()
     }
     
     // MARK: Search Bar Code
@@ -114,6 +132,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+        if let searchBarText = searchController.searchBar.text {
+            getDrugs(searchBarText)
+        }
     }
-}
+  }

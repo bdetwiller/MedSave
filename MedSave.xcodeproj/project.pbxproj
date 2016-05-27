@@ -26,6 +26,7 @@
 		B50023971CDBAC5B00CF994D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50023961CDBAC5B00CF994D /* Extensions.swift */; };
 		B50023991CDC020300CF994D /* PerscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50023981CDC020300CF994D /* PerscriptionTableViewCell.swift */; };
 		B500239B1CDC60C600CF994D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500239A1CDC60C600CF994D /* TabBarViewController.swift */; };
+		B5F313D31CF686B200CC3B38 /* apiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F313D21CF686B200CC3B38 /* apiRequest.swift */; };
 		BCA1F337E8C13BE83385AEA9 /* Pods_MedSaveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AB2033EE55A801AD8BA967 /* Pods_MedSaveUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		B50023961CDBAC5B00CF994D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B50023981CDC020300CF994D /* PerscriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerscriptionTableViewCell.swift; sourceTree = "<group>"; };
 		B500239A1CDC60C600CF994D /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B5F313D21CF686B200CC3B38 /* apiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiRequest.swift; sourceTree = "<group>"; };
 		F03C3B8AFBEC6CD5D9DCCC9E /* Pods-MedSave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedSave.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedSave/Pods-MedSave.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 		352673D71CAC6A36006DFBD9 /* MedSave */ = {
 			isa = PBXGroup;
 			children = (
+				B5F313D21CF686B200CC3B38 /* apiRequest.swift */,
 				35539B541CB421AB00A2F51F /* Controllers */,
 				352673D81CAC6A36006DFBD9 /* AppDelegate.swift */,
 				35539B531CB4219000A2F51F /* Views */,
@@ -485,6 +488,7 @@
 			files = (
 				35539B4D1CB2204B00A2F51F /* DrugDetailsTableViewCell.swift in Sources */,
 				35539B511CB4211700A2F51F /* PharmacyListViewController.swift in Sources */,
+				B5F313D31CF686B200CC3B38 /* apiRequest.swift in Sources */,
 				352673DD1CAC6A36006DFBD9 /* SearchViewController.swift in Sources */,
 				B50023991CDC020300CF994D /* PerscriptionTableViewCell.swift in Sources */,
 				3598E11C1CACF92B0049C0E5 /* DrugDetailsViewController.swift in Sources */,
